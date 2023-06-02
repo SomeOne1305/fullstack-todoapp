@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="/register" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="text" placeholder="first name" name="firstName">
+        <input type="text" placeholder="lastname" name="lastName">
+        <input type="email" placeholder="email" name="email">
+        <input type="password" name="password">
+        <input type="submit">
+    </form> -->
+    <!-- <form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="email" name="email" placeholder="email"/>
+        <input type="password" name="password" placeholder=""/>
+        <input type="submit">
+    </form> -->
+    <form>
+        <input type="text" name="body">
+        <input type="submit">
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('submit',async (e)=>{
+            e.preventDefault()
+            await fetch('/delete/1',{
+                method:"DELETE"
+            })
+            .then(res =>console.log(res))
+            .catch((err)=>console.log(err))
+        })
+    </script>
+</body>
+</html>
