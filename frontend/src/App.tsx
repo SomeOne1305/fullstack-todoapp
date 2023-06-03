@@ -10,7 +10,6 @@ const App = ():JSX.Element => {
       <Container>
         <Form/>
         <Title/>
-        <Register/>
         <div className="w-100 py-2 mt-3">
           
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import EditedLink from "../EditedLink";
 // import { useMutation } from "react-query";
 // import { user } from "../../interfaces";
 // type header ={
@@ -23,8 +24,8 @@ const Register = () => {
     console.log(object,e.currentTarget,e.target);
   }
   return (
-    <div className="w-100 d-flex justify-content-center align-items-center bg-simple">
-      <form action="http://localhost:8000/register" onSubmit={e=>onSubmit(e)} className="p-3 rounded-2 bg-white form needs-validation">
+    <div className="w-100 d-flex justify-content-center align-items-center">
+      <form action="http://localhost:8000/register" onSubmit={e=>onSubmit(e)} className="p-3 rounded-2 bg-white form needs-validation shadow">
         <div className="w-100 text-center">
           <span className="fs-1 text-primary">Register</span>
         </div>
@@ -79,6 +80,11 @@ const Register = () => {
           <button type="submit" className="btn w-100 text-center btn-primary mt-2">Sign Up</button>
         </div>
       </form>
+      <span>Already registered ?
+        <EditedLink to="/login">
+          <span className="text-primary link-underlined">Login</span>
+        </EditedLink>
+      </span>
     </div>
   );
 };
